@@ -25,7 +25,7 @@ def calcular_acceso_inferior():
     tarea_e = np.random.uniform(6,12)
     tarea_f = np.random.uniform(5,10)
     tarea_g = np.random.uniform(10,15)
-    return tarea_f + tarea_g
+    return tarea_a + tarea_d + tarea_e + tarea_f + tarea_g
 
 #Obtiene y retorna las demoras de los accesos
 def lavar():
