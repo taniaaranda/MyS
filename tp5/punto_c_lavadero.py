@@ -4,34 +4,29 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 #Obtiene, suma y retorna las demoras de las tareas a, b, y c del acceso superior 
-def calcular_acceso_superior():
-    tarea_a = np.random.uniform(1,5)
+def calcular_acceso_superior(tarea_a):
     tarea_b = np.random.uniform(1,3)
     tarea_c = np.random.uniform(1,3)
     return tarea_a + tarea_b + tarea_c
 
 #Obtiene, suma y retorna las demoras de las tareas a, d, e y f del acceso medio
-def calcular_acceso_medio():
-    tarea_a = np.random.uniform(1,5)
+def calcular_acceso_medio(tarea_a):
     tarea_d = np.random.uniform(1,6)
     tarea_e = np.random.uniform(6,12)
     tarea_f = np.random.uniform(5,10)
     return tarea_a + tarea_d + tarea_e + tarea_f
 
 #Obteniene, suma y retorna las demoras de las tareas a, d, e, f y g del acceso inferior
-def calcular_acceso_inferior():
-    tarea_a = np.random.uniform(1,5)
-    tarea_d = np.random.uniform(1,6)
-    tarea_e = np.random.uniform(6,12)
-    tarea_f = np.random.uniform(5,10)
+def calcular_acceso_inferior(tareas_anteriores):
     tarea_g = np.random.uniform(10,15)
-    return tarea_a + tarea_d + tarea_e + tarea_f + tarea_g
+    return tareas_anteriores + tarea_g
 
 #Obtiene y retorna las demoras de los accesos
 def lavar():
-    acceso_superior = calcular_acceso_superior()
-    acceso_medio = calcular_acceso_medio()
-    acceso_inferior = calcular_acceso_inferior()
+    tarea_a = np.random.uniform(1,5)
+    acceso_superior = calcular_acceso_superior(tarea_a)
+    acceso_medio = calcular_acceso_medio(tarea_a)
+    acceso_inferior = calcular_acceso_inferior(acceso_medio)
     return [acceso_superior,acceso_medio,acceso_inferior]    
 
 #Calcula el intervalo de confianza
