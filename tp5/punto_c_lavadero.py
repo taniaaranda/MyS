@@ -18,8 +18,11 @@ def calcular_acceso_medio():
     tarea_f = np.random.uniform(5,10)
     return tarea_a + tarea_d + tarea_e + tarea_f
 
-#Obteniene, suma y retorna las demoras de las tareas f y g del acceso inferior
+#Obteniene, suma y retorna las demoras de las tareas a, d, e, f y g del acceso inferior
 def calcular_acceso_inferior():
+    tarea_a = np.random.uniform(1,5)
+    tarea_d = np.random.uniform(1,6)
+    tarea_e = np.random.uniform(6,12)
     tarea_f = np.random.uniform(5,10)
     tarea_g = np.random.uniform(10,15)
     return tarea_f + tarea_g
